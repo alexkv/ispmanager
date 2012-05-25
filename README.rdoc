@@ -1,4 +1,4 @@
-= ispmanager
+= ISPManager Gem
 
 This ruby gem provides connection wrapper for ISPManager API
 
