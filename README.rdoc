@@ -1,6 +1,21 @@
 = ispmanager
 
-Description goes here.
+This ruby gem provides connection wrapper for ISPManager API
+
+== Install
+
+Run in terminal:
+	gem install ispmanager
+
+== Examples
+
+	panel = ISPManager.new(
+		:host => 'example.com',
+		:user => 'user',
+		:password => 'password'
+	)
+
+	p panel.domains.list
 
 == Contributing to ispmanager
  
