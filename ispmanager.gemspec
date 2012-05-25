@@ -20,11 +20,16 @@ Gem::Specification.new do |s|
     ".document",
     ".rspec",
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "ispmanager.gemspec",
     "lib/ispmanager.rb",
+    "lib/ispmanager/base.rb",
+    "lib/ispmanager/domain.rb",
+    "spec/ispmanager/domain_spec.rb",
     "spec/ispmanager_spec.rb",
     "spec/spec_helper.rb"
   ]
