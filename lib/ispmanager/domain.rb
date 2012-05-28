@@ -1,8 +1,5 @@
 class ISPManager::Domain < ISPManager::Base
-	
-	def list
+	def all
 		request 'wwwdomain'
 	end
-
-
 end

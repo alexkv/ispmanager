@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "ispmanager"
-  gem.homepage = "http://github.com/axy/ispmanager"
+  gem.homepage = "http://github.com/alexkv/ispmanager"
   gem.license = "MIT"
   gem.summary = %Q{API client for ISPManager panel}
   gem.description = %Q{API client for ISPManager panel}

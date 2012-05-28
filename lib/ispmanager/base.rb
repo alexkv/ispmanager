@@ -7,6 +7,8 @@ class ISPManager::Base
 		@params = params
 	end
 
+	protected
+
 	def request method, params = {}
 		result = ISPManager::Request.create method, params, @params
 		result = JSON.parse(result)
@@ -20,18 +22,6 @@ class ISPManager::Base
 		def recursive_symbolize_keys!
 			recursive_modify_keys! { |key| key.to_sym }
 		end
-
-		def recursive_stringify_keys!
-			recursive_modify_keys! { |key| key.to_s }
-		end
-
-		#def symbolize_keys!
-		#modify_keys! { |key| key.to_sym }
-		#end
-
-		#def stringify_keys!
-		#modify_keys! {|key| key.to_s }
-		#end
 
 		protected
 		def modify_keys!
