@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ispmanager"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Aleksei Kvitinskii"]
-  s.date = "2012-05-25"
+  s.date = "2012-05-28"
   s.description = "API client for ISPManager panel"
   s.email = "aleksei.wm@gmail.com"
   s.extra_rdoc_files = [
@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "spec/ispmanager_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/axy/ispmanager"
+  s.homepage = "http://github.com/alexkv/ispmanager"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
