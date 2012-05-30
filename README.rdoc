@@ -10,13 +10,13 @@ Run in terminal:
 
 == Examples
 
-	panel = ISPManager.new(
-		:url => 'https://example.com/manager',
-		:user => 'user',
-		:password => 'password'
-	)
+   panel = ISPManager.new(
+      :url => 'https://example.com/manager',
+      :user => 'user',
+      :password => 'password'
+   )
 
-	p panel.domains.list
+   p panel.domains.list
 
 == Contributing to ispmanager
  
