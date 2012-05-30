@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ispmanager"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Aleksei Kvitinskii"]
-  s.date = "2012-05-28"
+  s.date = "2012-05-30"
   s.description = "API client for ISPManager panel"
   s.email = "aleksei.wm@gmail.com"
   s.extra_rdoc_files = [
