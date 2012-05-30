@@ -1,14 +1,14 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe ISPManager do
-	let(:params){{host: 'example.com', user: 'user', password: 'password'}}
+	let(:params){{url: 'https://example.com/manager', user: 'user', password: 'password'}}
 
 	it "should not raise exceptions" do
 		ISPManager.new params
 	end
 
 	it "should require host" do
-		params.delete(:host)
+		params.delete(:url)
 		expect {ISPManager.new params}.should raise_exception( ISPManager::RequireConnectionParams)
 	end
 

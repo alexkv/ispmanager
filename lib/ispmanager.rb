@@ -1,12 +1,15 @@
+require 'uri'
+
 class ISPManager
 	require 'ispmanager/base'
 	require 'ispmanager/domain'
 
 	def initialize params
-		unless params[:host] && params[:user] && params[:password]
+		unless params[:url] && params[:user] && params[:password]
 			raise RequireConnectionParams
 		end
-		params[:port] ||= 443
+
+		params[:uri] = URI params[:url]
 		@params = params
 	end
 
@@ -19,7 +22,8 @@ class ISPManager
 
 	class Request
 		def self.create function, params, connection
-			http = Net::HTTP.new connection[:host], connection[:port]
+			uri = connection[:uri]
+			http = Net::HTTP.new uri.host, uri.port
 			http.use_ssl = true
 			http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
@@ -28,8 +32,8 @@ class ISPManager
 			params[:out] = :json
 			params[:func] = function
 			query = URI.encode_www_form(params)
-			path = "/manager/ispmgr?#{query}"
-			request = Net::HTTP::Get.new(path)
+			url = "#{uri.url}/ispmgr?#{query}"
+			request = Net::HTTP::Get.new(url)
 			result = http.start {|http| http.request(request) }.body
 		end
 	end

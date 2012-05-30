@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'fakeweb'
 
 describe ISPManager::Domain do
 	before( :each ) do
@@ -26,10 +25,10 @@ REQUREST
 		
 	end
 
-	subject { ISPManager::Domain.new :host => 'example.com', :user => 'user', :password => 'password'}
+	subject { ISPManager::Domain.new :url => 'https://example.com/manager', :user => 'user', :password => 'password'}
 
-	describe "list" do
+	describe "all" do
 
-		it {should have(2).list}
+		it {should have(2).all}
 	end
 end

@@ -10,7 +10,7 @@ Run in terminal:
 == Examples
 
 	panel = ISPManager.new(
-		:host => 'example.com',
+		:url => 'https://example.com/manager',
 		:user => 'user',
 		:password => 'password'
 	)
