@@ -5,7 +5,8 @@ This ruby gem provides connection wrapper for ISPManager API
 == Install
 
 Run in terminal:
-	gem install ispmanager
+
+  gem install ispmanager
 
 == Examples
 
